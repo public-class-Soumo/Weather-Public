@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="title-icon.png" type="image/png" />
+    <title>Weather Public</title>
+  </head>
+
+  <body>
+    <main class="weatherCard">
+      <div class="weatherGrid">
+        <!-- Left Section -->
+
+        <section>
+          <div class="searchBox">
+            <input
+              type="text"
+              id="cityInput"
+              placeholder="Search like 'Kolkata'"
+            />
+            <button id="searchButton">Search</button>
+          </div>
+          <div class="header">
+            <div>
+              <h2 class="location">Kolkata</h2>
+              <p class="date"></p>
+            </div>
+          </div>
+
+          <div class="temperatureMain">
+            <div class="tempLarge"></div>
+            <div class="condition"></div>
+          </div>
+
+          <div class="weatherStats">
+            <div class="stat">
+              <span>🌬️</span>
+              <span>6.1 mph</span>
+            </div>
+            <div class="stat">
+              <span>💧</span>
+              <span>90 %</span>
+            </div>
+          </div>
+
+          <div class="weeklyForecast">
+            <div class="dayForecast">
+              <div class="dayName"></div>
+              <div class="dayTemp"></div>
+              <div class="dayCondition"></div>
+            </div>
+            <div class="dayForecast">
+              <div class="dayName"></div>
+              <div class="dayTemp"></div>
+              <div class="dayCondition"></div>
+            </div>
+            <div class="dayForecast">
+              <div class="dayName"></div>
+              <div class="dayTemp"></div>
+              <div class="dayCondition"></div>
+            </div>
+            <div class="dayForecast">
+              <div class="dayName"></div>
+              <div class="dayTemp"></div>
+              <div class="dayCondition"></div>
+            </div>
+            <div class="dayForecast">
+              <div class="dayName"></div>
+              <div class="dayTemp"></div>
+              <div class="dayCondition"></div>
+            </div>
+            <div class="dayForecast">
+              <div class="dayName"></div>
+              <div class="dayTemp"></div>
+              <div class="dayCondition"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Section -->
+        <section class="rightSection">
+          <div>
+            <div class="currentHeader">
+              <h2 class="greeting"></h2>
+              <div class="currentTime"></div>
+            </div>
+            <div class="currentWeather">
+              <div class="currentTemp"></div>
+              <div class="currentDetails">
+                <div class="stat">🌬️</div>
+                <!-- <div class="stat">💧</div> -->
+              </div>
+              <div>
+                <div class="feelsLike">Feels like 19°</div>
+                <!-- <div>Cloudy</div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="hourlyForecast">
+            <h3 class="hourlyTitle">Hourly Forecast</h3>
+            <div class="hourlyGrid">
+              <div class="hourCard">
+                <div class="hourTime"></div>
+                <div class="hourTemp"></div>
+                <div class="hourCondition"></div>
+              </div>
+              <div class="hourCard">
+                <div class="hourTime"></div>
+                <div class="hourTemp"></div>
+                <div class="hourCondition"></div>
+              </div>
+              <div class="hourCard">
+                <div class="hourTime"></div>
+                <div class="hourTemp"></div>
+                <div class="hourCondition"></div>
+              </div>
+              <div class="hourCard">
+                <div class="hourTime"></div>
+                <div class="hourTemp"></div>
+                <div class="hourCondition"></div>
+              </div>
+              <div class="hourCard">
+                <div class="hourTime"></div>
+                <div class="hourTemp"></div>
+                <div class="hourCondition"></div>
+              </div>
+              <div class="hourCard">
+                <div class="hourTime"></div>
+                <div class="hourTemp"></div>
+                <div class="hourCondition"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
