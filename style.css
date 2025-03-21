@@ -1,7 +1,7 @@
 :root {
   --primary-text: #333333;
   --secondary-text: #666666;
-  --muted-text: #888888;
+  --muted-text: #555555;
   --card-bg: #ffffff;
   --page-bg: #f8f8f8;
   --border-radius: 24px;
@@ -21,6 +21,7 @@
 }
 body {
   background: linear-gradient(135deg, #ff5a3c, #8a00ff);
+  /* background-repeat: no-repeat; */
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -57,6 +58,11 @@ body {
 }
 
 /* LEFT SECTION */
+.leftSection {
+  border-radius: 1.5rem;
+  background-color: #e0e0e0;
+  padding: var(--spacing-lg);
+}
 .searchBox {
   margin-bottom: 1.5rem;
 }
@@ -65,13 +71,17 @@ body {
   height: 2.5rem;
   padding: 0.8rem;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  background-color: white;
+  border: none;
+  /* border-bottom: 2px solid #dff2fd; */
+  border-radius: 12px;
+  box-shadow: 3px 3px 6px #949494, -3px -3px 6px #ffffff;
   border-radius: 1.2rem;
 }
 .searchBox input:hover,
 input:focus {
   outline: none;
-  background: #f1f1f1;
+  background: #f1f1f1b4;
 }
 .searchBox button {
   width: 5rem;
@@ -81,23 +91,13 @@ input:focus {
   background: #007bff;
   color: white;
   border: none;
+  box-shadow: 3px 3px 6px #949494, -3px -3px 6px #ffffff;
   border-radius: 0.6rem;
   cursor: pointer;
 }
 .searchBox button:hover {
   background: #0056b3;
 }
-@media (max-width: 518px) {
-  .searchBox input {
-    width: 70%;
-  }
-}
-@media (min-width: 768px) and (max-width: 972px) {
-  .searchBox input {
-    width: 70%;
-  }
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -145,6 +145,8 @@ input:focus {
   margin-top: var(--spacing-lg);
 }
 .dayForecast {
+  border-radius: 12px;
+  box-shadow: 3px 3px 6px #949494, -3px -3px 6px #ffffff;
   padding: var(--spacing-sm);
 }
 .dayName {
@@ -165,6 +167,10 @@ input:focus {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
+  background-color: #e0e0e0;
+  border-radius: 1.5rem;
+  /* border-left: 2px solid rgb(71, 71, 71); */
+  padding: var(--spacing-lg);
 }
 .currentHeader {
   display: flex;
@@ -172,7 +178,7 @@ input:focus {
   align-items: baseline;
 }
 .greeting {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 .currentTime {
@@ -208,11 +214,15 @@ input:focus {
   gap: var(--spacing-md);
 }
 .hourCard {
-  background-color: var(--card-bg);
+  /* background-color: var(--card-bg); */
+  background-color: #e0e0e0;
   border-radius: 12px;
   padding: var(--spacing-md);
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+  /* box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.2),
+    inset -4px -4px 8px 0 rgba(255, 255, 255, 0.5); */
+  box-shadow: 3px 3px 6px #949494, -3px -3px 6px #ffffff;
 }
 .hourTime {
   font-weight: 500;
@@ -224,4 +234,28 @@ input:focus {
 .hourCondition {
   font-size: 0.875rem;
   color: var(--muted-text);
+}
+@media (max-width: 518px) {
+  .searchBox input {
+    width: 70%;
+  }
+  .weeklyForecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* padding: var(--spacing-sm); */
+  }
+  .rightSection {
+    border-left: none;
+    padding: var(--spacing-sm);
+  }
+}
+@media (min-width: 519px) and (max-width: 582px) {
+  .searchBox input {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) and (max-width: 972px) {
+  .searchBox input {
+    width: 70%;
+  }
 }
