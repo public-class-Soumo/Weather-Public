@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const forecastApiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=";
 
   const cityInput = document.getElementById("cityInput");
+  cityInput.setAttribute("spellcheck", false);
   const searchButton = document.getElementById("searchButton");
-
   const greetingElement = document.querySelector(".greeting");
 
   window.addEventListener("load", () => {
@@ -65,6 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cityName) {
       fetchWeatherData(cityName);
       fetchForecastData(cityName);
+    }
+  });
+  cityInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      const cityName = cityInput.value.trim();
+      if (cityName) {
+        fetchWeatherData(cityName);
+        fetchForecastData(cityName);
+      }
     }
   });
 
